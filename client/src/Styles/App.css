@@ -1,0 +1,1743 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*::-moz-selection {
+  color: white;
+  background-color: black;
+}
+
+*::selection {
+  color: white;
+  background-color: black;
+}
+
+/* Andy bell Reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  /* *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    } */
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.f-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0.2rem 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-2 {
+  background-color: black;
+  color: white;
+  max-width: 14rem;
+  width: 100%;
+  padding: 0.6rem 0;
+  border-radius: 2rem;
+}
+
+.btn-3 {
+  background-color: rgb(0, 156, 0);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.35rem 1rem;
+}
+.btn-3:hover {
+  background-color: green;
+}
+@media (max-width: 40em) {
+  .btn-3 {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.95rem;
+  }
+}
+@media (max-width: 40em) {
+  .btn-3 {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.95rem;
+  }
+}
+
+.userDeatils {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.userDeatils p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: black;
+}
+.userDeatils span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+}
+.userDeatils img {
+  border-radius: 100vw;
+}
+@media (max-width: 50em) {
+  .userDeatils p {
+    font-size: 0.75rem;
+  }
+  .userDeatils span {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 40em) {
+  .userDeatils p {
+    font-size: 0.65rem;
+  }
+  .userDeatils span {
+    font-size: 0.6rem;
+  }
+}
+
+.btmstyle {
+  position: relative;
+}
+.btmstyle::before {
+  content: attr(div);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border: 1px solid black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.up-animate-in {
+  transition: 0.3s all ease-in-out;
+  transform: translateY(60%);
+  scale: 0;
+}
+
+.up-animate-out {
+  transform: translateY(0);
+  scale: 1;
+}
+
+.error {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: rgb(215, 0, 0);
+  text-align: center;
+}
+
+font[size="5"] {
+  font-size: 5rem;
+}
+
+font[size="4"] {
+  font-size: 1.5rem;
+}
+
+.atag {
+  display: inline;
+  text-decoration: underline;
+  position: relative;
+}
+.atag:hover .aRtag {
+  display: block;
+}
+
+.aRtag {
+  position: absolute;
+  bottom: -1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  background-color: black;
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.3rem;
+  width: -moz-max-content;
+  width: max-content;
+  display: none;
+  transition: 1s all ease;
+  z-index: 99999;
+  line-height: 25px;
+}
+.aRtag:hover {
+  display: block;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.transform-0 {
+  transform: translateX(0) !important;
+}
+
+.Imgfocused {
+  border: 1px solid green;
+}
+
+.close-btn {
+  position: absolute;
+  z-index: 99999;
+  right: 0;
+  top: 0;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.transform-right-in {
+  transition: 0.5s all ease;
+  transform: translateX(100%);
+}
+
+.transform-right-out {
+  transform: translateX(0);
+}
+
+.blogHr {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  margin: 0;
+}
+
+.nameDateLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blogLink {
+  width: 100%;
+}
+
+.loadingMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.loadingMain div {
+  max-width: 6rem;
+  min-height: 6rem;
+  width: 100%;
+  border: 8px solid black;
+  border-top: 10px solid white;
+  border-radius: 100vw;
+  animation: spin 1s ease infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Navbar {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eeeeee;
+}
+.Navbar .mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navbar .mainNav .leftSec {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 30em) {
+  .Navbar .mainNav .leftSec {
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+}
+.Navbar .mainNav .leftSec .search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f9f9f9;
+  padding: 0.5rem 0.7rem;
+  border-radius: 2rem;
+}
+.Navbar .mainNav .leftSec .search input {
+  border: none;
+  outline: none;
+  font-family: "Source Serif 4", serif;
+  background-color: #f9f9f9;
+}
+@media (max-width: 30em) {
+  .Navbar .mainNav .leftSec .search input {
+    display: none;
+  }
+}
+.Navbar .mainNav .leftSec .logo {
+  width: 4rem;
+}
+.Navbar .mainNav .rightSec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.7rem;
+}
+.Navbar .mainNav .rightSec .userImg {
+  position: relative;
+  cursor: pointer;
+}
+.Navbar .mainNav .rightSec .userImg img {
+  max-width: 2.1rem;
+  border-radius: 100vw;
+  cursor: pointer;
+  border: 1px solid #eeeeee;
+  background-color: #f9f9f9;
+}
+.Navbar .mainNav .rightSec .userImg:hover::after {
+  border-radius: 100vw;
+  content: attr(div);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1098039216);
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.Navbar .mainNav .rightSec svg {
+  cursor: pointer;
+}
+.Navbar .mainNav .rightSec .WriteDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #6b6b6b;
+  cursor: pointer;
+  gap: 0.3rem;
+  font-family: "Source Serif 4", serif;
+}
+.Navbar .mainNav .rightSec .WriteDiv:hover {
+  color: #4b4848;
+}
+@media (max-width: 50em) {
+  .Navbar .mainNav .rightSec .WriteDiv {
+    font-size: 0.9rem;
+  }
+  .Navbar .mainNav .rightSec .WriteDiv svg {
+    width: 20px;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1170px;
+  margin: auto;
+  width: 100%;
+  gap: 5rem;
+  padding: 0 0.3rem;
+  position: relative;
+}
+.hero .leftSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 1.8rem 1rem;
+  flex-grow: 8.5;
+  flex-basis: 0;
+}
+@media (max-width: 50em) {
+  .hero .leftSec {
+    gap: 2rem;
+  }
+}
+@media (max-width: 40em) {
+  .hero .leftSec {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+.hero .rightSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: sticky;
+  top: -249px;
+  transition: 0.5s all ease;
+  gap: 2rem;
+  padding: 2.5rem;
+  flex-grow: 3.5;
+  flex-basis: 0;
+  border-left: 1px solid #eeeeee;
+  min-height: 100vh;
+}
+@media (max-width: 60em) {
+  .hero .rightSec {
+    display: none;
+  }
+}
+.hero .rightSec .Recomendations {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.hero .rightSec .Recomendations .RecomInter {
+  width: 100%;
+}
+.hero .rightSec .Recomendations h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+.hero .rightSec .Recomendations img {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+.hero .rightSec h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  width: 100%;
+}
+.hero .rightSec .rTopics {
+  width: 100%;
+}
+.hero .rightSec .rTopics .topicsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+.hero .rightSec .rTopics .topicsDiv span {
+  background-color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  text-align: center;
+  width: -moz-max-content;
+  width: max-content;
+}
+.hero .rightSec .RF .RfDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.hero .rightSec .RF .RfDiv .Pvf {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block: 1rem 0;
+}
+.hero .rightSec .RF .RfDiv .Pvf img {
+  border-radius: 100vw;
+  margin-top: 0.2rem;
+}
+.hero .rightSec .RF .RfDiv .Pvf h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.hero .rightSec .RF .RfDiv .Pvf p {
+  font-family: "Source Serif 4", serif;
+  font-size: 0.8rem;
+}
+.hero .rightSec .Rdl p.noRdl {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+}
+
+.STop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.099);
+}
+.STop p {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+@media (max-width: 50em) {
+  .STop {
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+  .STop p {
+    padding: 0.5rem 0;
+  }
+}
+@media (max-width: 30em) {
+  .STop {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 30em) {
+  .STop {
+    font-size: 0.6rem;
+  }
+}
+
+.blogInterLink {
+  width: 100%;
+}
+
+.BlogsInter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+.BlogsInter .blogInter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+}
+.BlogsInter .blogInter .blogInterMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+}
+@media (max-width: 50em) {
+  .BlogsInter .blogInter .blogInterMain {
+    gap: 2rem;
+  }
+}
+@media (max-width: 40em) {
+  .BlogsInter .blogInter .blogInterMain {
+    gap: 1rem;
+  }
+}
+@media (max-width: 30em) {
+  .BlogsInter .blogInter .blogInterMain {
+    gap: 0.5rem;
+  }
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 10;
+  flex-basis: 0;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  width: 100%;
+  word-break: break-word;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails p {
+  font-family: "Source Serif 4", serif;
+  font-size: 0.9rem;
+  width: 100%;
+  word-break: break-word;
+}
+@media (max-width: 50em) {
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails h2 {
+    font-size: 1rem;
+  }
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 40em) {
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails h2 {
+    font-size: 0.85rem;
+  }
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails p {
+    font-size: 0.6rem;
+  }
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .genresDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  background-color: #f9f9f9;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+}
+@media (max-width: 50em) {
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails span {
+    font-size: 0.6rem;
+    padding: 0.2rem 1rem;
+    font-weight: 700;
+  }
+}
+@media (max-width: 40em) {
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails {
+    margin-top: 0.5rem;
+  }
+  .BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails span {
+    font-size: 0.4rem;
+    padding: 0.2rem 0.7rem;
+    font-weight: 700;
+  }
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails svg {
+  cursor: pointer;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 1.2rem;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails svg:hover {
+  stroke: black;
+  stroke-width: 0.4px;
+}
+.BlogsInter .blogInter .blogInterMain .leftBlogDetails .blogDetails svg:hover:nth-child(2) path {
+  stroke-width: 1.2px;
+  stroke: black;
+}
+.BlogsInter .blogInter .blogInterMain .blogImg {
+  flex-grow: 2.5;
+  flex-basis: 0;
+}
+
+.UacMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0.5rem 0.7rem;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  transition: 1s all ease;
+}
+.UacMain .Uac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  max-width: 42rem;
+  min-height: 42rem;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.252);
+  border-radius: 0.5rem;
+  position: relative;
+}
+.UacMain .Uac .cr-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.UacMain .Uac .cr-btn:hover {
+  fill: black;
+}
+.UacMain .Uac h1 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 500;
+}
+.UacMain .Uac .middleAuth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.6rem;
+  width: 100%;
+}
+.UacMain .Uac .middleAuth p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.UacMain .Uac .middleAuth p span {
+  color: rgb(48, 141, 48);
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.UacMain .Uac .middleAuth p span:hover {
+  color: green;
+}
+.UacMain .Uac .middleAuth .autnBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+.UacMain .Uac .middleAuth .autnBtns .signbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 19rem;
+  width: 100%;
+  border: 1px solid black;
+  padding: 0.6rem 0.3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.UacMain .Uac .middleAuth .autnBtns .signbtn P {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+}
+.UacMain .Uac .middleAuth .autnBtns .signbtn svg {
+  align-self: flex-start;
+  position: absolute;
+}
+.UacMain .Uac .bottomAuth {
+  max-width: 55ch;
+}
+.UacMain .Uac .bottomAuth p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.599);
+  text-align: center;
+}
+.UacMain .Uac .EmailmiddleAuth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 20rem;
+  width: 100%;
+  gap: 2rem;
+}
+.UacMain .Uac .EmailmiddleAuth div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.UacMain .Uac .EmailmiddleAuth div span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.703);
+}
+.UacMain .Uac .EmailmiddleAuth div P {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: rgb(215, 0, 0);
+  text-align: center;
+}
+.UacMain .Uac .EmailmiddleAuth div input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  font-family: "Source Serif 4", serif;
+  font-size: 1rem;
+}
+.UacMain .Uac .otheropts {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: rgb(48, 141, 48) !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+.UacMain .Uac .otheropts:hover {
+  color: green;
+}
+
+.writeDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 770px;
+  width: 100%;
+  margin: auto;
+  padding: 0rem 0.5rem 2rem;
+  gap: 0.5rem;
+}
+.writeDiv .titleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.writeDiv .titleDiv span {
+  color: rgba(0, 0, 0, 0.516);
+  position: absolute;
+  pointer-events: none;
+  font-family: "Source Serif 4", serif;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+.writeDiv .storyDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  position: relative;
+}
+.writeDiv .storyDiv span {
+  color: rgba(0, 0, 0, 0.516);
+  position: absolute;
+  pointer-events: none;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.5rem;
+  left: 0;
+}
+.writeDiv .title {
+  font-size: 3.5rem;
+  font-family: "Source Serif 4", serif;
+  width: 100%;
+  border: none;
+  outline: none;
+  line-height: 3.5rem;
+  position: relative;
+  cursor: text;
+}
+.writeDiv .story {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.5rem;
+  position: relative;
+  cursor: text;
+  border-block: 1px solid rgba(0, 0, 0, 0.304);
+}
+.writeDiv .textEM {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  max-width: 15rem;
+  width: 100%;
+  border-radius: 0.4rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-color: black;
+  color: white;
+  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+.writeDiv .textEM hr {
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+.writeDiv .textEM div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.writeDiv .textEM div svg {
+  cursor: pointer;
+}
+.writeDiv .textEM div button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.writeDiv .textEM .linkdiv input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.writeDiv .adder-btnDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  right: 0;
+  padding: 1rem 0.5rem;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 999;
+  gap: 0.5rem;
+}
+.writeDiv .adder-btnDiv .adder-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  padding: 0 0.2rem;
+}
+.writeDiv .adder-btnDiv .adder-btn div.opner {
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 100vw;
+  transition: 0.5s all ease;
+}
+.writeDiv .adder-btnDiv .adder-btn div.opner svg {
+  pointer-events: none;
+}
+.writeDiv .adder-btnDiv .adder-btn .mainfuncsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 0.7rem;
+  width: 100%;
+}
+.writeDiv .adder-btnDiv .adder-btn .mainfuncsDiv div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s all ease;
+  cursor: pointer;
+}
+.writeDiv .adder-btnDiv .adder-btn .mainfuncsDiv input {
+  display: none;
+}
+.writeDiv .urlInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 0.2rem 0.2rem;
+  gap: 0.5rem;
+  max-width: 15rem;
+  width: 100%;
+  background-color: white;
+  transform: translateX(100vw);
+  transition: 0.7s all ease;
+  z-index: 1000;
+}
+.writeDiv .urlInput input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+.writeDiv .urlInput svg {
+  cursor: pointer;
+  stroke: black;
+}
+.writeDiv .iframe {
+  border: none;
+  outline: none;
+}
+
+.genreSelectDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 9999999;
+  background-color: rgba(255, 255, 255, 0.95);
+  top: 0;
+  padding: 0.7rem;
+}
+.genreSelectDiv .genreSelect {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 65rem;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  padding: 6rem 1rem;
+  background-color: white;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.252);
+  border-radius: 0.9rem;
+  gap: 3rem;
+  position: relative;
+}
+@media (max-width: 50em) {
+  .genreSelectDiv .genreSelect {
+    flex-direction: column;
+    padding: 2rem 0.85rem;
+  }
+  .genreSelectDiv .genreSelect .Preview {
+    width: 100%;
+  }
+}
+.genreSelectDiv .genreSelect .Preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+.genreSelectDiv .genreSelect .Preview .thumb {
+  width: 100%;
+  height: 100%;
+}
+.genreSelectDiv .genreSelect .Preview p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.genreSelectDiv .genreSelect .Preview .fileInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12rem;
+  background-color: #f9f9f9;
+}
+.genreSelectDiv .genreSelect .Preview .fileInput p {
+  pointer-events: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  max-width: 35ch;
+}
+.genreSelectDiv .genreSelect .Preview input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+}
+.genreSelectDiv .genreSelect .Preview input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.447);
+}
+.genreSelectDiv .genreSelect .Preview input::placeholder {
+  color: rgba(0, 0, 0, 0.447);
+}
+.genreSelectDiv .genreSelect .genres {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-basis: 0;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.genreSelectDiv .genreSelect .genres h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.genreSelectDiv .genreSelect .genres p {
+  font-family: "Source Serif 4", serif;
+  font-size: 0.95rem;
+}
+.genreSelectDiv .genreSelect .genres .geenreInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.293);
+  gap: 0.5rem;
+  width: 100%;
+}
+.genreSelectDiv .genreSelect .genres .geenreInput span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.599);
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 0.5rem;
+  word-break: break-word;
+}
+.genreSelectDiv .genreSelect .genres .geenreInput span .cross {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.genreSelectDiv .genreSelect .genres .geenreInput input {
+  border: 1px solid black;
+  outline: none;
+  max-width: 7rem;
+  padding: 0.2rem;
+}
+
+.blogMain {
+  max-width: 750px;
+  width: 100%;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+@media (max-width: 50em) {
+  .blogMain {
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 40em) {
+  .blogMain {
+    padding: 1rem 0.5rem;
+  }
+}
+.blogMain .blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+.blogMain .blog .topSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.9rem;
+  width: 100%;
+}
+.blogMain .blog .topSec h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  width: 100%;
+  font-weight: 800;
+}
+.blogMain .blog .topSec p {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  width: 100%;
+  color: rgb(107, 107, 107);
+  word-break: break-word;
+}
+@media (max-width: 50em) {
+  .blogMain .blog .topSec h1 {
+    font-size: 2rem;
+  }
+  .blogMain .blog .topSec p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 40em) {
+  .blogMain .blog .topSec h1 {
+    font-size: 1rem;
+  }
+  .blogMain .blog .topSec p {
+    font-size: 1rem;
+  }
+}
+.blogMain .blog .topSec .userDeatilsBlog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.blogMain .blog .topSec .userDeatilsBlog img {
+  border-radius: 100vw;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.blogMain .blog .topSec .userDeatilsBlog .userDetailsRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blogMain .blog .topSec .userDeatilsBlog .userDetailsRight div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+}
+.blogMain .blog .topSec .userDeatilsBlog .userDetailsRight div p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+}
+.blogMain .blog .topSec .userDeatilsBlog .userDetailsRight div span:nth-child(2) {
+  color: green;
+  cursor: pointer;
+  font-weight: 500;
+}
+.blogMain .blog .topSec .userDeatilsBlog .userDetailsRight div span:nth-child(1) {
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+.blogMain .blog .l_c {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.blogMain .blog .l_c div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.blogMain .blog .l_c div svg {
+  pointer-events: none;
+}
+.blogMain .blog .blogCodeMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+.blogMain .blog .blogCodeMain .thumbnail {
+  max-width: 10rem;
+  width: 100%;
+}
+.blogMain .blog .blogCodeMain .blogCode .titleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.blogMain .blog .blogCodeMain .blogCode .titleDiv span {
+  color: rgba(0, 0, 0, 0.516);
+  position: absolute;
+  pointer-events: none;
+  font-family: "Source Serif 4", serif;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+.blogMain .blog .blogCodeMain .blogCode .storyDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  position: relative;
+}
+.blogMain .blog .blogCodeMain .blogCode .storyDiv span {
+  color: rgba(0, 0, 0, 0.516);
+  position: absolute;
+  pointer-events: none;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.5rem;
+  left: 0;
+}
+.blogMain .blog .blogCodeMain .blogCode .storyDiv div {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.3rem;
+}
+.blogMain .blog .blogCodeMain .blogCode .title {
+  font-size: 3.5rem;
+  font-family: "Source Serif 4", serif;
+  width: 100%;
+  border: none;
+  outline: none;
+  line-height: 3.5rem;
+  position: relative;
+  cursor: text;
+  word-break: break-word;
+}
+.blogMain .blog .blogCodeMain .blogCode .story {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.3rem;
+  position: relative;
+  cursor: text;
+  word-break: break-word;
+}
+
+.commentDialogMain {
+  position: absolute;
+  min-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.163);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.commentDialogMain .commentDialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  position: absolute;
+  z-index: 999999;
+  right: 0;
+  min-height: 100vh;
+  max-width: 25rem;
+  width: 100%;
+  background-color: white;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.252);
+  padding: 1rem;
+}
+.commentDialogMain .commentDialog .commentTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.commentDialogMain .commentDialog .commentTop h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.commentDialogMain .commentDialog .Mycomment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.252);
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+.commentDialogMain .commentDialog .Mycomment .mycommentTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.commentDialogMain .commentDialog .Mycomment .mycommentTop img {
+  border-radius: 100vh;
+}
+.commentDialogMain .commentDialog .Mycomment .mycommentTop p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+}
+.commentDialogMain .commentDialog .Mycomment span {
+  width: 100%;
+  min-height: 5rem;
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: text;
+}
+.commentDialogMain .commentDialog .Mycomment span:empty::before {
+  content: "What are your thoughts?";
+  color: rgba(0, 0, 0, 0.319);
+}
+.commentDialogMain .commentDialog .Mycomment .commentBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+.commentDialogMain .commentDialog .allcomments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+.commentDialogMain .commentDialog .allcomments .com {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+.commentDialogMain .commentDialog .allcomments .com .comtop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.commentDialogMain .commentDialog .allcomments .com .comtop img {
+  border-radius: 100vw;
+}
+.commentDialogMain .commentDialog .allcomments .com .comtop p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.commentDialogMain .commentDialog .allcomments .com .comtop span {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.471);
+}
+.commentDialogMain .commentDialog .allcomments .com h4 {
+  width: 100%;
+  word-break: break-word;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.profilepageMain {
+  max-width: 1170px;
+  margin: auto;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+.profilepageMain .profilepage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6rem;
+  font-family: "Poppins", sans-serif;
+}
+.profilepageMain .profilepage .leftProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3rem 0;
+  flex-grow: 8;
+  flex-basis: 0;
+}
+.profilepageMain .profilepage .leftProfile .leftProfileBottom {
+  width: 100%;
+}
+.profilepageMain .profilepage .leftProfile h3 {
+  padding-top: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+@media (max-width: 50em) {
+  .profilepageMain .profilepage .leftProfile h1 {
+    display: none;
+  }
+}
+@media (max-width: 40em) {
+  .profilepageMain .profilepage .leftProfile h3 {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+}
+.profilepageMain .profilepage .rightProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  flex-grow: 3;
+  flex-basis: 0;
+  border-left: 1px solid #eeeeee;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+.profilepageMain .profilepage .rightProfile img {
+  border-radius: 100vw;
+}
+.profilepageMain .profilepage .rightProfile h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.profilepageMain .profilepage .rightProfile p {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+@media (max-width: 50em) {
+  .profilepageMain .profilepage {
+    gap: 3rem;
+  }
+  .profilepageMain .profilepage .leftProfile {
+    padding: 2rem 0;
+    flex-grow: 7;
+    gap: 2rem;
+  }
+  .profilepageMain .profilepage .rightProfile {
+    padding: 2rem;
+    flex-grow: 3;
+  }
+  .profilepageMain .profilepage .rightProfile h2 {
+    font-size: 1rem;
+  }
+  .profilepageMain .profilepage .rightProfile img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media (max-width: 40em) {
+  .profilepageMain .profilepage {
+    gap: 1rem;
+  }
+  .profilepageMain .profilepage .leftProfile {
+    padding: 1rem 0;
+    flex-grow: 7;
+    gap: 1rem;
+  }
+  .profilepageMain .profilepage .rightProfile {
+    padding: 1rem;
+    flex-grow: 3;
+  }
+  .profilepageMain .profilepage .rightProfile h2 {
+    font-size: 0.85em;
+  }
+  .profilepageMain .profilepage .rightProfile p {
+    font-size: 0.75rem;
+  }
+  .profilepageMain .profilepage .rightProfile img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 30em) {
+  .profilepageMain .profilepage {
+    gap: 0.5rem;
+  }
+  .profilepageMain .profilepage .leftProfile {
+    padding: 0.5rem 0;
+    flex-grow: 7;
+    gap: 1rem;
+  }
+  .profilepageMain .profilepage .rightProfile {
+    padding: 0.5rem;
+    flex-grow: 3;
+  }
+  .profilepageMain .profilepage .rightProfile h2 {
+    font-size: 0.75em;
+  }
+  .profilepageMain .profilepage .rightProfile p {
+    font-size: 0.65rem;
+  }
+  .profilepageMain .profilepage .rightProfile img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 25em) {
+  .profilepageMain .profilepage {
+    gap: 0.5rem;
+  }
+  .profilepageMain .profilepage .leftProfile {
+    padding: 0.5rem 0;
+    flex-grow: 7;
+    gap: 1rem;
+  }
+  .profilepageMain .profilepage .rightProfile {
+    padding: 0.2rem;
+    flex-grow: 3;
+  }
+  .profilepageMain .profilepage .rightProfile h2 {
+    font-size: 0.75em;
+  }
+  .profilepageMain .profilepage .rightProfile p {
+    font-size: 0.65rem;
+  }
+  .profilepageMain .profilepage .rightProfile img {
+    width: 2rem;
+    height: 2rem;
+  }
+}/*# sourceMappingURL=App.css.map */
