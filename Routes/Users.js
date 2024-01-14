@@ -130,22 +130,23 @@ router.post("/changeProfileImg", getUserId, async (req, res) => {
   const userid = req.id;
   if (req.body.newImg) {
     try {
-      const imgChanged = await User.findOneAndUpdate(
+      await User.findOneAndUpdate(
         { _id: userid },
         { $set: { profileImg: req.body.newImg } }
       );
-      const allposts = await post.updateMany(
+      await post.updateMany(
         { id: userid },
         { $set: { profileImg: req.body.newImg } }
       );
-      const updated = await post.updateMany(
+      await post.updateMany(
         { comments: { $elemMatch: { commentorId: userid } } },
         { $set: { "comments.$[elem].commenterImg": req.body.newImg } },
         { arrayFilters: [{ "elem.commentorId": userid }] }
       );
-      const ch = await readingList.updateMany(
-        { userid: userid },
-        { $set: { "readingList.read.posterImg": req.body.newImg } }
+      await readingList.updateMany(
+        { readingList: { $elemMatch: { posterId: userid } } },
+        { $set: { "readingList.$[elem].posterImg": req.body.newImg } },
+        { arrayFilters: [{ "elem.posterId": userid }] }
       );
 
       res.status(200).send({ success: "success" });
